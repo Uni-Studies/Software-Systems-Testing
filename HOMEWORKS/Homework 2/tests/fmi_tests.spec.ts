@@ -53,7 +53,7 @@ test('unsuccessfull login with invalid credentials', async ({page}) => {
 
 
 /* НЕОБХОДИМО ЗА ТЕСТ 3 и за изпълнението на останалите тестове след това!
-Трябва да се изпълни файлът saveStorageState.ts.
+Трябва да се компилира файлът saveStorageState.ts.
     За тази цел аз изпълних следния код: npx tsx saveStorageState.ts в терминала, 
     за да създам файла googleStorageState.json, в който се запазва сесията за логване в Google.
 
@@ -64,7 +64,7 @@ test('unsuccessfull login with invalid credentials', async ({page}) => {
     да цъкнете Resume в Playwright Inspector-а.
 
 
-! Ако на някой тест видите, timeout error, може да направите timeout-а по-голям в playwright.config.ts, 
+! Ако на някой тест видите timeout error, може да направите timeout-а по-голям в playwright.config.ts, 
   защото ръчното логване изисква повече време.
   Аз съм го задала на 600 000 ms, което значи, че всеки тест има 10 минути да се изпълни.  
 */
@@ -141,7 +141,7 @@ test.describe('with Google storage state', () => {
         const chatFrame = page.frameLocator('iframe#lhc_iframe'); 
 
         await expect(chatFrame.locator('#widget-layout')).toBeVisible();
-        });
+    });
 
     // TEST 7
     test('open gmail', async ({ page, context }) => {
