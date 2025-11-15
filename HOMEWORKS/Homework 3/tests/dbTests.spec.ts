@@ -2,7 +2,10 @@ import {test, expect} from "@playwright/test";
 import { connectToOracleDB } from "../connectionToDb";  
 import OracleDB from "oracledb";
 
-//OracleDB.initOracleClient({ libDir: "C:\\oracle\\instantclient_23_9" });
+// Изпълнете npm install --save-dev @types/oracledb в терминала, 
+// за да не подчертава горния ред.
+// След като го изпълните, ще трябва да рестартирате VS Code.
+
 
 // TEST 1
 test('Test joining drivers and their countries', async ({}) => {
